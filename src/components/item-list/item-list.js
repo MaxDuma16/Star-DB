@@ -22,7 +22,7 @@ export default class ItemList extends Component {
     }
   
 
-    renderItem(arr) {
+    renderItems(arr) {
       return arr.map(({id, name}) => {
         return (
           <li className="list-group-item"
@@ -30,7 +30,7 @@ export default class ItemList extends Component {
             onClick={() => this.props.onItemSelected(id)}>
             {name}
          </li>
-        )
+        );
       });
     }
 
@@ -42,7 +42,7 @@ export default class ItemList extends Component {
       return <Spinner/>
     }
 
-    const items = this.renderItem(peopleList);
+    const items = this.renderItems(peopleList);
 
     return (
       <ul className="item-list list-group">

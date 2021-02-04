@@ -22,8 +22,6 @@ export default class App extends Component {
     });
   };
 
-
-
   onPersonSelected = (id) => {
       this.setState({
       selectedPerson: id
@@ -40,7 +38,7 @@ export default class App extends Component {
       <div>
         <Header />
         {planet}
-
+     
         <button
           className="toggle-planet btn btn-warning"
           onClick={this.toggleRandomPlanet}>
